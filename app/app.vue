@@ -8,6 +8,7 @@
         <h1 class="title">Chambres d'hôtes Nartuby</h1>
         <p class="address">15, Boulevard André Bouis</p>
         <p class="address">83929 La Motte</p>
+        <p class="website">www.maisonnartuby.fr</p>
       </div>
     </div>
   </div>
@@ -95,6 +96,16 @@ html {
   margin: 0.5rem 0;
 }
 
+.website {
+  font-family: 'Georgia', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.95;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0.5rem 0;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 2.5rem;
@@ -102,6 +113,10 @@ html {
   }
 
   .address {
+    font-size: 1.2rem;
+  }
+
+  .website {
     font-size: 1.2rem;
   }
 }
