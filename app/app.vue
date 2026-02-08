@@ -1,17 +1,25 @@
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
+
 <template>
-  <div class="landing-page">
-    <NuxtRouteAnnouncer />
-    <div class="hero">
-      <div class="hero-image"></div>
-      <div class="overlay"></div>
-      <div class="content">
-        <h1 class="title">Chambres d'hôtes Nartuby</h1>
-        <p class="address">15, Boulevard André Bouis</p>
-        <p class="address">83929 La Motte</p>
-        <p class="website">www.maisonnartuby.fr</p>
+  <UApp>
+    <div class="landing-page">
+      <NuxtRouteAnnouncer />
+      <!-- <LanguageSwitcher /> -->
+      <div class="hero">
+        <div class="hero-image"></div>
+        <div class="overlay"></div>
+        <div class="content">
+          <h1 class="title">{{ t("title") }}</h1>
+          <p class="address">{{ t("address1") }}</p>
+          <p class="address">{{ t("address2") }}</p>
+          <p class="website">{{ t("website") }}</p>
+          <a :href="`mailto:${t('email')}`" class="email">{{ t("email") }}</a>
+        </div>
       </div>
     </div>
-  </div>
+  </UApp>
 </template>
 
 <style>
@@ -54,7 +62,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/sunset-view.jpeg');
+  background-image: url("/sunset-view.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,8 +85,16 @@ html {
   padding: 2rem;
 }
 
+/* General link styles */
+.content a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
 .title {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 4rem;
   font-weight: 300;
   letter-spacing: 3px;
@@ -87,7 +103,7 @@ html {
 }
 
 .address {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 1.5rem;
   font-weight: 300;
   font-style: italic;
@@ -97,13 +113,51 @@ html {
 }
 
 .website {
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   font-size: 1.5rem;
   font-weight: 300;
   font-style: italic;
   opacity: 0.95;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   margin: 0.5rem 0;
+}
+
+.email {
+  font-family: "Georgia", serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.95;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0.5rem 0;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.2rem 0.5rem;
+}
+
+.email::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.email:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.email:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -117,6 +171,10 @@ html {
   }
 
   .website {
+    font-size: 1.2rem;
+  }
+
+  .email {
     font-size: 1.2rem;
   }
 }
