@@ -3,5 +3,43 @@
   "address1": "15, Boulevard André Bouis",
   "address2": "83929 La Motte",
   "website": "www.maisonnartuby.fr",
-  "email": "maison.nartuby{'@'}gmail.com"
+  "email": "maison.nartuby{'@'}gmail.com",
+  "rooms": {
+    "discover": "Discover our rooms",
+    "title": "Our Rooms",
+    "backToHome": "Home",
+    "backToRooms": "All rooms",
+    "capacity": "Capacity",
+    "capacityPersons": "{count} person | {count} persons",
+    "amenitiesTitle": "Amenities",
+    "gallery": "Photo gallery",
+    "champagne": {
+      "name": "Champagne",
+      "description": "An elegant room with golden tones, evoking the refinement and gentle art of living in Provence."
+    },
+    "nid": {
+      "name": "Nest",
+      "description": "A warm and intimate cocoon, ideal for recharging in the calm of the surrounding nature."
+    },
+    "creatif": {
+      "name": "Creative",
+      "description": "An inspiring space with artistic touches, where creativity and comfort meet harmoniously."
+    },
+    "nartuby": {
+      "name": "Nartuby",
+      "description": "The house's signature room, offering a stunning view and an authentic atmosphere."
+    },
+    "lavande": {
+      "name": "Lavender",
+      "description": "Bathed in Provençal scents, this room invites relaxation and serenity."
+    },
+    "bookOnAirbnb": "Book on Airbnb",
+    "amenities": {
+      "wifi": "Free Wi-Fi",
+      "privateBathroom": "Private bathroom",
+      "sharedBathroom": "Shared bathroom",
+      "linens": "Sheets and towels provided",
+      "bodycare": "Body wash and shampoo included"
+    }
+  }
 }

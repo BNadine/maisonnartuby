@@ -3,5 +3,43 @@
   "address1": "15, Boulevard André Bouis",
   "address2": "83929 La Motte",
   "website": "www.maisonnartuby.fr",
-  "email": "maison.nartuby{'@'}gmail.com"
+  "email": "maison.nartuby{'@'}gmail.com",
+  "rooms": {
+    "discover": "Découvrir nos chambres",
+    "title": "Nos Chambres",
+    "backToHome": "Accueil",
+    "backToRooms": "Toutes les chambres",
+    "capacity": "Capacité",
+    "capacityPersons": "{count} personne | {count} personnes",
+    "amenitiesTitle": "Équipements",
+    "gallery": "Galerie photos",
+    "champagne": {
+      "name": "Champagne",
+      "description": "Une chambre élégante aux tons dorés, évoquant le raffinement et la douceur de vivre provençale."
+    },
+    "nid": {
+      "name": "Nid",
+      "description": "Un cocon chaleureux et intime, idéal pour se ressourcer au calme de la nature environnante."
+    },
+    "creatif": {
+      "name": "Créatif",
+      "description": "Un espace inspirant aux touches artistiques, où créativité et confort se rencontrent harmonieusement."
+    },
+    "nartuby": {
+      "name": "Nartuby",
+      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique."
+    },
+    "lavande": {
+      "name": "Lavande",
+      "description": "Baignée de senteurs provençales, cette chambre invite à la détente et à la sérénité."
+    },
+    "bookOnAirbnb": "Réserver sur Airbnb",
+    "amenities": {
+      "wifi": "Wi-Fi gratuit",
+      "privateBathroom": "Salle de bain privée",
+      "sharedBathroom": "Salle de bain partagée",
+      "linens": "Draps et linge de toilette fournis",
+      "bodycare": "Gel douche et shampooing inclus"
+    }
+  }
 }

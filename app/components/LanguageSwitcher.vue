@@ -1,14 +1,14 @@
 <script setup lang="ts">
-const { locale, locales, setLocale } = useI18n()
+const { locale, locales, setLocale } = useI18n();
 
 const selectedLocale = computed({
   get: () => locale.value,
-  set: (value: string) => setLocale(value as Parameters<typeof setLocale>[0])
-})
+  set: (value: string) => setLocale(value as Parameters<typeof setLocale>[0]),
+});
 </script>
 
 <template>
-  <div class="language-switcher">
+  <div class="language-switcher" v-if="locales.length > 1">
     <USelect
       v-model="selectedLocale"
       :items="locales"
