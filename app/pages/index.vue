@@ -175,6 +175,9 @@ html {
   border: 1px solid rgba(255, 255, 255, 0.6);
   transition: all 0.3s ease;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  max-width: 90vw;
+  text-align: center;
 }
 
 .rooms-link:hover {
