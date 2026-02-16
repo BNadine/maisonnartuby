@@ -8,7 +8,7 @@ const selectedLocale = computed({
 </script>
 
 <template>
-  <div class="language-switcher" v-if="locales.length > 1">
+  <div v-if="locales.length > 1" class="language-switcher">
     <USelect
       v-model="selectedLocale"
       :items="locales"

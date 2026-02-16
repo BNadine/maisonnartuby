@@ -31,7 +31,7 @@ const rooms = getAllRooms();
             :alt="t(room.nameKey)"
             class="room-image"
             loading="lazy"
-          />
+          >
         </div>
         <div class="room-info">
           <h2 class="room-name">{{ t(room.nameKey) }}</h2>

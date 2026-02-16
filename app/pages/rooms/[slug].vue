@@ -75,7 +75,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
               :src="room.images[selectedImage]"
               :alt="`${t(room.nameKey)} - Photo ${selectedImage + 1}`"
               class="gallery-main-image"
-            />
+            >
           </Transition>
         </div>
         <div class="gallery-thumbnails">
@@ -89,7 +89,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
               :src="image"
               :alt="`${t(room.nameKey)} - Miniature ${index + 1}`"
               loading="lazy"
-            />
+            >
           </button>
         </div>
       </section>
@@ -145,7 +145,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
               :src="room.images[selectedImage]"
               :alt="`${t(room.nameKey)} - Photo ${selectedImage + 1}`"
               class="lightbox-image"
-            />
+            >
           </Transition>
           <button class="lightbox-next" @click="nextImage">&rsaquo;</button>
           <div class="lightbox-counter">{{ selectedImage + 1 }} / {{ room.images.length }}</div>

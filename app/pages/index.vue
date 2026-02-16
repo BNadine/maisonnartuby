@@ -5,8 +5,8 @@ const { t } = useI18n();
 <template>
   <div class="landing-page">
     <div class="hero">
-      <div class="hero-image"></div>
-      <div class="overlay"></div>
+      <div class="hero-image"/>
+      <div class="overlay"/>
       <div class="content">
         <h1 class="title">{{ t("title") }}</h1>
         <p class="address">{{ t("address1") }}</p>

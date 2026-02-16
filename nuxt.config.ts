@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
+  modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/eslint"],
   i18n: {
     locales: [
       { code: "fr", file: "fr.json", name: "Français" },
