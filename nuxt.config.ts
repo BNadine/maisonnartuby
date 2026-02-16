@@ -13,13 +13,23 @@ export default defineNuxtConfig({
     output: {
       publicDir: "dist",
     },
+    prerender: {
+      routes: [
+        "/rooms",
+        "/rooms/champagne",
+        "/rooms/nid",
+        "/rooms/creatif",
+        "/rooms/nartuby",
+        "/rooms/lavande",
+      ],
+    },
   },
-  modules: ["@nuxt/ui", "@nuxtjs/i18n"],
+  modules: ["@nuxt/ui", "@nuxtjs/i18n", "@nuxt/eslint"],
   i18n: {
     locales: [
       { code: "fr", file: "fr.json", name: "Français" },
-      // { code: "en", file: "en.json", name: "English" },
-      // { code: "de", file: "de.json", name: "Deutsch" },
+      { code: "en", file: "en.json", name: "English" },
+      { code: "de", file: "de.json", name: "Deutsch" },
     ],
     defaultLocale: "fr",
     langDir: "translations",
