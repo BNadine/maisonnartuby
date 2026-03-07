@@ -3,5 +3,6 @@
     <NuxtRouteAnnouncer />
     <LanguageSwitcher />
     <NuxtPage />
+    <SiteFooter />
   </UApp>
 </template>

@@ -4,6 +4,17 @@
   "address2": "83929 La Motte",
   "website": "www.maisonnartuby.fr",
   "email": "maison.nartuby{'@'}gmail.com",
+  "footer": {
+    "impressum": "Mentions légales"
+  },
+  "impressum": {
+    "operator": "Exploitant",
+    "contact": "Contact",
+    "emailLabel": "E-mail",
+    "websiteLabel": "Site web",
+    "disclaimer": "Avertissement",
+    "disclaimerText": "Le contenu de ce site est fourni à titre informatif uniquement. Nous ne garantissons pas l'exactitude, l'exhaustivité ou l'actualité des informations fournies."
+  },
   "rooms": {
     "discover": "Découvrir nos chambres",
     "title": "Nos Chambres",

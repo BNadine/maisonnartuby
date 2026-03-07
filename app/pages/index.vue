@@ -20,6 +20,11 @@ const { t } = useI18n();
         </div>
       </div>
     </div>
+    <div class="landing-footer">
+      <NuxtLink to="/impressum" class="landing-footer-link">
+        {{ t("footer.impressum") }}
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -208,5 +213,26 @@ html {
     font-size: 1rem;
     padding: 0.6rem 1.5rem;
   }
+}
+
+.landing-footer {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.landing-footer-link {
+  font-family: "Georgia", serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.landing-footer-link:hover {
+  color: rgba(255, 255, 255, 0.9);
 }
 </style>

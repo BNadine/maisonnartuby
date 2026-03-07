@@ -21,6 +21,7 @@ export default defineNuxtConfig({
         "/rooms/creatif",
         "/rooms/nartuby",
         "/rooms/lavande",
+        "/impressum",
       ],
     },
   },
