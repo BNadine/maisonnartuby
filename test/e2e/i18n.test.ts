@@ -28,13 +28,13 @@ test.describe("Language Switching", () => {
   });
 
   test("language persists across navigation", async ({ page }) => {
-    await page.goto("/rooms?features=airbnb");
+    await page.goto("/rooms");
     await switchLanguage(page, "English");
     await expect(page.locator(".page-title")).toContainText("Our Rooms");
 
     await page.locator(".room-card").first().click();
     await page.waitForURL(/\/rooms\/.+/);
-    await expect(page.locator(".booking-button")).toContainText("Book on Airbnb");
+    await expect(page.locator(".back-button")).toContainText("All rooms");
   });
 
   test("room detail page translates correctly", async ({ page }) => {
