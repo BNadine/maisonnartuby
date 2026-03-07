@@ -12,26 +12,33 @@
     "capacity": "Capacity",
     "capacityPersons": "{count} person | {count} persons",
     "amenitiesTitle": "Amenities",
+    "houseAmenitiesTitle": "House & Location",
+    "bedType": "Bed",
     "gallery": "Photo gallery",
     "champagne": {
       "name": "Champagne",
-      "description": "An elegant room with golden tones, evoking the refinement and gentle art of living in Provence."
+      "description": "An elegant room with golden tones, evoking the refinement and gentle art of living in Provence.",
+      "bed": "Convertible single/double bed"
     },
     "nid": {
       "name": "Nest",
-      "description": "A warm and intimate cocoon, ideal for recharging in the calm of the surrounding nature."
+      "description": "A warm and intimate cocoon, ideal for recharging in the calm of the surrounding nature.",
+      "bed": "Single bed"
     },
     "creatif": {
       "name": "Creative",
-      "description": "An inspiring space with artistic touches, where creativity and comfort meet harmoniously."
+      "description": "An inspiring space with artistic touches, where creativity and comfort meet harmoniously.",
+      "bed": "Two single beds, combinable into a double bed (2m x 2m)"
     },
     "nartuby": {
       "name": "Nartuby",
-      "description": "The house's signature room, offering a stunning view and an authentic atmosphere."
+      "description": "The house's signature room, offering a stunning view and an authentic atmosphere. Located in the separate annex.",
+      "bed": "Double bed"
     },
     "lavande": {
       "name": "Lavender",
-      "description": "Bathed in Provençal scents, this room invites relaxation and serenity."
+      "description": "Bathed in Provençal scents, this room invites relaxation and serenity.",
+      "bed": "Double bed (1.8m x 2m)"
     },
     "bookOnAirbnb": "Book on Airbnb",
     "amenities": {
@@ -39,7 +46,15 @@
       "privateBathroom": "Private bathroom",
       "sharedBathroom": "Shared bathroom",
       "linens": "Sheets and towels provided",
-      "bodycare": "Body wash and shampoo included"
+      "bodycare": "Body wash and shampoo included",
+      "premiumBedding": "Premium beds and mattresses (German quality)",
+      "downDuvets": "High-quality down duvets",
+      "naturalCooling": "Naturally cooled by plane trees",
+      "coffeeMachine": "Coffee machine",
+      "keyBox": "Key box access",
+      "freeParking": "Free public parking nearby",
+      "evCharging": "EV charging stations nearby",
+      "busStop": "Bus stop 200m away"
     }
   }
 }

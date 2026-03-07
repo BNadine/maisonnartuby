@@ -2,16 +2,29 @@ export interface Room {
   slug: string;
   nameKey: string;
   descriptionKey: string;
+  bedKey: string;
   capacity: number;
-  amenitiesKeys: string[];
+  roomAmenitiesKeys: string[];
+  houseAmenitiesKeys: string[];
   images: string[];
   bookingUrl: string;
 }
 
-const sharedAmenities = [
+const roomAmenities = [
   "rooms.amenities.wifi",
   "rooms.amenities.linens",
   "rooms.amenities.bodycare",
+  "rooms.amenities.premiumBedding",
+  "rooms.amenities.downDuvets",
+  "rooms.amenities.coffeeMachine",
+];
+
+const houseAmenities = [
+  "rooms.amenities.naturalCooling",
+  "rooms.amenities.keyBox",
+  "rooms.amenities.freeParking",
+  "rooms.amenities.evCharging",
+  "rooms.amenities.busStop",
 ];
 
 const rooms: Room[] = [
@@ -19,8 +32,10 @@ const rooms: Room[] = [
     slug: "champagne",
     nameKey: "rooms.champagne.name",
     descriptionKey: "rooms.champagne.description",
+    bedKey: "rooms.champagne.bed",
     capacity: 2,
-    amenitiesKeys: [...sharedAmenities, "rooms.amenities.sharedBathroom"],
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.sharedBathroom"],
+    houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 5 }, (_, i) => `/rooms/champagne/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-1",
   },
@@ -28,8 +43,10 @@ const rooms: Room[] = [
     slug: "nid",
     nameKey: "rooms.nid.name",
     descriptionKey: "rooms.nid.description",
+    bedKey: "rooms.nid.bed",
     capacity: 1,
-    amenitiesKeys: [...sharedAmenities, "rooms.amenities.sharedBathroom"],
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.sharedBathroom"],
+    houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 5 }, (_, i) => `/rooms/nid/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-2",
   },
@@ -37,8 +54,10 @@ const rooms: Room[] = [
     slug: "creatif",
     nameKey: "rooms.creatif.name",
     descriptionKey: "rooms.creatif.description",
+    bedKey: "rooms.creatif.bed",
     capacity: 2,
-    amenitiesKeys: [...sharedAmenities, "rooms.amenities.sharedBathroom"],
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.sharedBathroom"],
+    houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 10 }, (_, i) => `/rooms/creatif/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-3",
   },
@@ -46,8 +65,10 @@ const rooms: Room[] = [
     slug: "nartuby",
     nameKey: "rooms.nartuby.name",
     descriptionKey: "rooms.nartuby.description",
+    bedKey: "rooms.nartuby.bed",
     capacity: 2,
-    amenitiesKeys: [...sharedAmenities, "rooms.amenities.privateBathroom"],
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.privateBathroom"],
+    houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 7 }, (_, i) => `/rooms/nartuby/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-4",
   },
@@ -55,8 +76,10 @@ const rooms: Room[] = [
     slug: "lavande",
     nameKey: "rooms.lavande.name",
     descriptionKey: "rooms.lavande.description",
+    bedKey: "rooms.lavande.bed",
     capacity: 2,
-    amenitiesKeys: [...sharedAmenities, "rooms.amenities.privateBathroom"],
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.privateBathroom"],
+    houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 5 }, (_, i) => `/rooms/lavande/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-5",
   },

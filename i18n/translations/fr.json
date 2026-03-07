@@ -12,26 +12,33 @@
     "capacity": "Capacité",
     "capacityPersons": "{count} personne | {count} personnes",
     "amenitiesTitle": "Équipements",
+    "houseAmenitiesTitle": "Maison & Environs",
+    "bedType": "Couchage",
     "gallery": "Galerie photos",
     "champagne": {
       "name": "Champagne",
-      "description": "Une chambre élégante aux tons dorés, évoquant le raffinement et la douceur de vivre provençale."
+      "description": "Une chambre élégante aux tons dorés, évoquant le raffinement et la douceur de vivre provençale.",
+      "bed": "Lit convertible simple/double"
     },
     "nid": {
       "name": "Nid",
-      "description": "Un cocon chaleureux et intime, idéal pour se ressourcer au calme de la nature environnante."
+      "description": "Un cocon chaleureux et intime, idéal pour se ressourcer au calme de la nature environnante.",
+      "bed": "Lit simple"
     },
     "creatif": {
       "name": "Créatif",
-      "description": "Un espace inspirant aux touches artistiques, où créativité et confort se rencontrent harmonieusement."
+      "description": "Un espace inspirant aux touches artistiques, où créativité et confort se rencontrent harmonieusement.",
+      "bed": "Deux lits simples, combinables en lit double (2m x 2m)"
     },
     "nartuby": {
       "name": "Nartuby",
-      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique."
+      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique. Située dans l'annexe indépendante.",
+      "bed": "Lit double"
     },
     "lavande": {
       "name": "Lavande",
-      "description": "Baignée de senteurs provençales, cette chambre invite à la détente et à la sérénité."
+      "description": "Baignée de senteurs provençales, cette chambre invite à la détente et à la sérénité.",
+      "bed": "Lit double (1,8m x 2m)"
     },
     "bookOnAirbnb": "Réserver sur Airbnb",
     "amenities": {
@@ -39,7 +46,15 @@
       "privateBathroom": "Salle de bain privée",
       "sharedBathroom": "Salle de bain partagée",
       "linens": "Draps et linge de toilette fournis",
-      "bodycare": "Gel douche et shampooing inclus"
+      "bodycare": "Gel douche et shampooing inclus",
+      "premiumBedding": "Literie haut de gamme (qualité allemande)",
+      "downDuvets": "Couettes en duvet de qualité supérieure",
+      "naturalCooling": "Climatisation naturelle par les platanes",
+      "coffeeMachine": "Machine à café",
+      "keyBox": "Accès par boîte à clés",
+      "freeParking": "Parking public gratuit à proximité",
+      "evCharging": "Bornes de recharge électrique à proximité",
+      "busStop": "Arrêt de bus à 200m"
     }
   }
 }

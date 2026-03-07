@@ -12,26 +12,33 @@
     "capacity": "Kapazität",
     "capacityPersons": "{count} Person | {count} Personen",
     "amenitiesTitle": "Ausstattung",
+    "houseAmenitiesTitle": "Haus & Umgebung",
+    "bedType": "Schlafplatz",
     "gallery": "Fotogalerie",
     "champagne": {
       "name": "Champagne",
-      "description": "Ein elegantes Zimmer in goldenen Tönen, das die Raffinesse und das sanfte Lebensgefühl der Provence hervorruft."
+      "description": "Ein elegantes Zimmer in goldenen Tönen, das die Raffinesse und das sanfte Lebensgefühl der Provence hervorruft.",
+      "bed": "Verwandelbares Einzel-/Doppelbett"
     },
     "nid": {
       "name": "Nest",
-      "description": "Ein warmer und intimer Kokon, ideal zum Auftanken in der Ruhe der umliegenden Natur."
+      "description": "Ein warmer und intimer Kokon, ideal zum Auftanken in der Ruhe der umliegenden Natur.",
+      "bed": "Einzelbett"
     },
     "creatif": {
       "name": "Kreativ",
-      "description": "Ein inspirierender Raum mit künstlerischen Akzenten, wo Kreativität und Komfort harmonisch aufeinandertreffen."
+      "description": "Ein inspirierender Raum mit künstlerischen Akzenten, wo Kreativität und Komfort harmonisch aufeinandertreffen.",
+      "bed": "Zwei Einzelbetten, zusammenschiebbar zum Doppelbett (2m x 2m)"
     },
     "nartuby": {
       "name": "Nartuby",
-      "description": "Das Signaturzimmer des Hauses mit atemberaubendem Blick und authentischer Atmosphäre."
+      "description": "Das Signaturzimmer des Hauses mit atemberaubendem Blick und authentischer Atmosphäre. Im separaten Anbau gelegen.",
+      "bed": "Doppelbett"
     },
     "lavande": {
       "name": "Lavendel",
-      "description": "Getaucht in provenzalische Düfte, lädt dieses Zimmer zu Entspannung und Gelassenheit ein."
+      "description": "Getaucht in provenzalische Düfte, lädt dieses Zimmer zu Entspannung und Gelassenheit ein.",
+      "bed": "Doppelbett (1,8m x 2m)"
     },
     "bookOnAirbnb": "Auf Airbnb buchen",
     "amenities": {
@@ -39,7 +46,15 @@
       "privateBathroom": "Eigenes Badezimmer",
       "sharedBathroom": "Gemeinschaftsbad",
       "linens": "Bettwäsche und Handtücher inklusive",
-      "bodycare": "Duschgel und Shampoo inklusive"
+      "bodycare": "Duschgel und Shampoo inklusive",
+      "premiumBedding": "Premium-Betten und Matratzen (deutsche Qualität)",
+      "downDuvets": "Hochwertige Daunendecken",
+      "naturalCooling": "Natürlich klimatisiert durch Platanen",
+      "coffeeMachine": "Kaffeemaschine",
+      "keyBox": "Zugang per Schlüsselbox",
+      "freeParking": "Kostenlose öffentliche Parkplätze in der Nähe",
+      "evCharging": "E-Ladestationen in der Nähe",
+      "busStop": "Bushaltestelle 200m entfernt"
     }
   }
 }

@@ -2,6 +2,7 @@
 const { t } = useI18n();
 const route = useRoute();
 const { getRoom } = useRooms();
+const { isEnabled } = useFeatureFlags();
 
 const slug = route.params.slug as string;
 const room = getRoom(slug);
@@ -107,11 +108,27 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
           <p class="detail-value">{{ t("rooms.capacityPersons", { count: room.capacity }) }}</p>
         </section>
 
-        <!-- Amenities -->
+        <!-- Bed -->
+        <section class="detail-card">
+          <h2 class="detail-title">{{ t("rooms.bedType") }}</h2>
+          <p class="detail-value">{{ t(room.bedKey) }}</p>
+        </section>
+
+        <!-- Room Amenities -->
         <section class="detail-card">
           <h2 class="detail-title">{{ t("rooms.amenitiesTitle") }}</h2>
           <ul class="amenities-list">
-            <li v-for="amenityKey in room.amenitiesKeys" :key="amenityKey">
+            <li v-for="amenityKey in room.roomAmenitiesKeys" :key="amenityKey">
+              {{ t(amenityKey) }}
+            </li>
+          </ul>
+        </section>
+
+        <!-- House & Location -->
+        <section class="detail-card">
+          <h2 class="detail-title">{{ t("rooms.houseAmenitiesTitle") }}</h2>
+          <ul class="amenities-list">
+            <li v-for="amenityKey in room.houseAmenitiesKeys" :key="amenityKey">
               {{ t(amenityKey) }}
             </li>
           </ul>
@@ -119,7 +136,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
       </div>
 
       <!-- Booking -->
-      <div class="booking-section">
+      <div v-if="isEnabled('airbnb')" class="booking-section">
         <a :href="room.bookingUrl" target="_blank" rel="noopener" class="booking-button">
           {{ t("rooms.bookOnAirbnb") }}
         </a>
