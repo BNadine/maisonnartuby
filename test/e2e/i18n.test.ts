@@ -28,7 +28,7 @@ test.describe("Language Switching", () => {
   });
 
   test("language persists across navigation", async ({ page }) => {
-    await page.goto("/rooms");
+    await page.goto("/rooms?features=airbnb");
     await switchLanguage(page, "English");
     await expect(page.locator(".page-title")).toContainText("Our Rooms");
 

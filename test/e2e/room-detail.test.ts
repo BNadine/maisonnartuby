@@ -8,8 +8,8 @@ test.describe("Room Detail Page", () => {
   test("displays room info sections", async ({ page }) => {
     await expect(page.locator(".room-title")).toContainText("Nartuby");
     await expect(page.locator(".room-description")).not.toBeEmpty();
-    await expect(page.locator(".detail-card")).toHaveCount(2);
-    await expect(page.locator(".amenities-list li")).toHaveCount(4);
+    await expect(page.locator(".detail-card")).toHaveCount(4);
+    await expect(page.locator(".amenities-list li")).toHaveCount(12);
   });
 
   test("gallery thumbnails update main image", async ({ page }) => {
@@ -68,7 +68,12 @@ test.describe("Room Detail Page", () => {
     await expect(counter).toContainText("1 /");
   });
 
-  test("booking button links to Airbnb", async ({ page }) => {
+  test("booking button is hidden without feature flag", async ({ page }) => {
+    await expect(page.locator(".booking-button")).not.toBeVisible();
+  });
+
+  test("booking button shows with airbnb feature flag", async ({ page }) => {
+    await page.goto("/rooms/nartuby?features=airbnb");
     const bookingButton = page.locator(".booking-button");
     await expect(bookingButton).toBeVisible();
     await expect(bookingButton).toHaveAttribute("href", /airbnb\.de\/h\/maisonnartuby-/);

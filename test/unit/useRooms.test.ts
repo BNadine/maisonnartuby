@@ -15,8 +15,10 @@ describe("useRooms", () => {
       expect(room.slug).toBeTruthy();
       expect(room.nameKey).toBeTruthy();
       expect(room.descriptionKey).toBeTruthy();
+      expect(room.bedKey).toBeTruthy();
       expect(room.capacity).toBeGreaterThan(0);
-      expect(room.amenitiesKeys.length).toBeGreaterThan(0);
+      expect(room.roomAmenitiesKeys.length).toBeGreaterThan(0);
+      expect(room.houseAmenitiesKeys.length).toBeGreaterThan(0);
       expect(room.images.length).toBeGreaterThan(0);
       expect(room.bookingUrl).toMatch(/^https:\/\/airbnb\.de\/h\/maisonnartuby-\d$/);
     }
@@ -48,23 +50,23 @@ describe("useRooms", () => {
   it("nartuby and lavande have private bathroom", () => {
     const nartuby = getRoom("nartuby");
     const lavande = getRoom("lavande");
-    expect(nartuby!.amenitiesKeys).toContain("rooms.amenities.privateBathroom");
-    expect(lavande!.amenitiesKeys).toContain("rooms.amenities.privateBathroom");
+    expect(nartuby!.roomAmenitiesKeys).toContain("rooms.amenities.privateBathroom");
+    expect(lavande!.roomAmenitiesKeys).toContain("rooms.amenities.privateBathroom");
   });
 
   it("champagne, nid, and creatif have shared bathroom", () => {
     for (const slug of ["champagne", "nid", "creatif"]) {
       const room = getRoom(slug);
-      expect(room!.amenitiesKeys).toContain("rooms.amenities.sharedBathroom");
+      expect(room!.roomAmenitiesKeys).toContain("rooms.amenities.sharedBathroom");
     }
   });
 
   it("all rooms have shared amenities (wifi, linens, bodycare)", () => {
     const rooms = getAllRooms();
     for (const room of rooms) {
-      expect(room.amenitiesKeys).toContain("rooms.amenities.wifi");
-      expect(room.amenitiesKeys).toContain("rooms.amenities.linens");
-      expect(room.amenitiesKeys).toContain("rooms.amenities.bodycare");
+      expect(room.roomAmenitiesKeys).toContain("rooms.amenities.wifi");
+      expect(room.roomAmenitiesKeys).toContain("rooms.amenities.linens");
+      expect(room.roomAmenitiesKeys).toContain("rooms.amenities.bodycare");
     }
   });
 
