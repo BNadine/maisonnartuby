@@ -20,11 +20,57 @@ const { t } = useI18n();
         </div>
       </div>
     </div>
-    <div class="landing-footer">
-      <NuxtLink to="/impressum" class="landing-footer-link">
-        {{ t("footer.impressum") }}
-      </NuxtLink>
-    </div>
+
+    <section class="pricing-section">
+      <h2 class="pricing-title">{{ t("pricing.title") }}</h2>
+
+      <div class="pricing-table-wrapper">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>{{ t("pricing.normalSeason") }}</th>
+              <th>{{ t("pricing.holidaySeason") }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ t("pricing.perPersonPerNight") }}</td>
+              <td>59 &euro;</td>
+              <td>89 &euro;</td>
+            </tr>
+            <tr>
+              <td>{{ t("pricing.secondPerson") }}</td>
+              <td>+ 20 &euro;</td>
+              <td>+ 30 &euro;</td>
+            </tr>
+            <tr>
+              <td>{{ t("pricing.breakfast") }}</td>
+              <td>7 &euro;</td>
+              <td>10 &euro;</td>
+            </tr>
+            <tr>
+              <td>{{ t("pricing.touristTax") }}</td>
+              <td colspan="2">1,40 &euro; {{ t("pricing.touristTaxNote") }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pricing-info">
+        <div class="pricing-info-block">
+          <h3>{{ t("pricing.holidayPeriods") }}</h3>
+          <ul>
+            <li>{{ t("pricing.holidayPeriod1") }}</li>
+            <li>{{ t("pricing.holidayPeriod2") }}</li>
+            <li>{{ t("pricing.holidayPeriod3") }}</li>
+            <li>{{ t("pricing.holidayPeriod4") }}</li>
+          </ul>
+        </div>
+        <p class="breakfast-times">{{ t("pricing.breakfastTimes") }}</p>
+      </div>
+    </section>
+
   </div>
 </template>
 
@@ -44,12 +90,8 @@ html {
 }
 
 .landing-page {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
 }
 
 .hero {
@@ -191,6 +233,101 @@ html {
   transform: translateY(-2px);
 }
 
+/* Pricing Section */
+.pricing-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.pricing-title {
+  font-family: "Georgia", serif;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #2c2c2c;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.pricing-table-wrapper {
+  overflow-x: auto;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid #e8e4df;
+}
+
+.pricing-table th {
+  font-weight: 400;
+  color: #2c2c2c;
+  background: #faf8f5;
+  font-size: 1.05rem;
+}
+
+.pricing-table td {
+  color: #555;
+}
+
+.pricing-table td:first-child {
+  color: #2c2c2c;
+  font-weight: 400;
+}
+
+.pricing-table td:not(:first-child) {
+  text-align: center;
+}
+
+.pricing-table th:not(:first-child) {
+  text-align: center;
+}
+
+.pricing-info {
+  color: #555;
+  font-family: "Georgia", serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.pricing-info-block h3 {
+  font-family: "Georgia", serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-info-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+
+.pricing-info-block li {
+  padding: 0.2rem 0;
+}
+
+.pricing-info-block li::before {
+  content: "\25B8\00a0";
+  color: #999;
+}
+
+.breakfast-times {
+  font-style: italic;
+  color: #666;
+}
+
 @media (max-width: 768px) {
   .title {
     font-size: 2.5rem;
@@ -213,26 +350,22 @@ html {
     font-size: 1rem;
     padding: 0.6rem 1.5rem;
   }
-}
 
-.landing-footer {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-}
+  .pricing-section {
+    padding: 3rem 1rem;
+  }
 
-.landing-footer-link {
-  font-family: "Georgia", serif;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+  .pricing-title {
+    font-size: 2rem;
+  }
 
-.landing-footer-link:hover {
-  color: rgba(255, 255, 255, 0.9);
+  .pricing-table {
+    font-size: 0.9rem;
+  }
+
+  .pricing-table th,
+  .pricing-table td {
+    padding: 0.7rem 0.6rem;
+  }
 }
 </style>

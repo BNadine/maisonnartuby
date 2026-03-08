@@ -67,6 +67,11 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
     <div class="room-content">
       <h1 class="room-title">{{ t(room.nameKey) }}</h1>
 
+      <!-- Unavailable Banner -->
+      <div v-if="room.status === 'unavailable'" class="unavailable-banner">
+        {{ t("rooms.unavailable") }}
+      </div>
+
       <!-- Photo Gallery -->
       <section class="gallery-section">
         <div class="gallery-main" @click="openLightbox(selectedImage)">
@@ -136,7 +141,7 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
       </div>
 
       <!-- Booking -->
-      <div v-if="isEnabled('airbnb')" class="booking-section">
+      <div v-if="isEnabled('airbnb') && room.status !== 'unavailable'" class="booking-section">
         <a :href="room.bookingUrl" target="_blank" rel="noopener" class="booking-button">
           {{ t("rooms.bookOnAirbnb") }}
         </a>
@@ -225,6 +230,19 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
   letter-spacing: 2px;
   color: #2c2c2c;
   margin-bottom: 2rem;
+}
+
+/* Unavailable Banner */
+.unavailable-banner {
+  background: #f5e6e0;
+  border: 1px solid #e0c4b8;
+  color: #8b5e3c;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Gallery */

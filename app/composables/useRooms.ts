@@ -4,10 +4,12 @@ export interface Room {
   descriptionKey: string;
   bedKey: string;
   capacity: number;
+  pricePerNight: number;
   roomAmenitiesKeys: string[];
   houseAmenitiesKeys: string[];
   images: string[];
   bookingUrl: string;
+  status?: "available" | "unavailable";
 }
 
 const roomAmenities = [
@@ -34,10 +36,12 @@ const rooms: Room[] = [
     descriptionKey: "rooms.champagne.description",
     bedKey: "rooms.champagne.bed",
     capacity: 2,
+    pricePerNight: 59,
     roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.sharedBathroom"],
     houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 5 }, (_, i) => `/rooms/champagne/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-1",
+    status: "unavailable",
   },
   {
     slug: "nid",
@@ -45,6 +49,7 @@ const rooms: Room[] = [
     descriptionKey: "rooms.nid.description",
     bedKey: "rooms.nid.bed",
     capacity: 1,
+    pricePerNight: 59,
     roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.sharedBathroom"],
     houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 5 }, (_, i) => `/rooms/nid/${i + 1}.jpg`),
@@ -56,6 +61,7 @@ const rooms: Room[] = [
     descriptionKey: "rooms.creatif.description",
     bedKey: "rooms.creatif.bed",
     capacity: 2,
+    pricePerNight: 59,
     roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.sharedBathroom"],
     houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 10 }, (_, i) => `/rooms/creatif/${i + 1}.jpg`),
@@ -67,6 +73,7 @@ const rooms: Room[] = [
     descriptionKey: "rooms.nartuby.description",
     bedKey: "rooms.nartuby.bed",
     capacity: 2,
+    pricePerNight: 59,
     roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.privateBathroom"],
     houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 7 }, (_, i) => `/rooms/nartuby/${i + 1}.jpg`),
@@ -78,10 +85,23 @@ const rooms: Room[] = [
     descriptionKey: "rooms.lavande.description",
     bedKey: "rooms.lavande.bed",
     capacity: 2,
-    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.privateBathroom"],
+    pricePerNight: 59,
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.privateShowerSharedWC"],
     houseAmenitiesKeys: houseAmenities,
     images: Array.from({ length: 5 }, (_, i) => `/rooms/lavande/${i + 1}.jpg`),
     bookingUrl: "https://airbnb.de/h/maisonnartuby-5",
+  },
+  {
+    slug: "rose",
+    nameKey: "rooms.rose.name",
+    descriptionKey: "rooms.rose.description",
+    bedKey: "rooms.rose.bed",
+    capacity: 1,
+    pricePerNight: 59,
+    roomAmenitiesKeys: [...roomAmenities, "rooms.amenities.privateBathroomEnSuite"],
+    houseAmenitiesKeys: houseAmenities,
+    images: Array.from({ length: 4 }, (_, i) => `/rooms/rose/${i + 1}.jpg`),
+    bookingUrl: "",
   },
 ];
 

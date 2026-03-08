@@ -26,9 +26,10 @@
     "houseAmenitiesTitle": "Maison & Environs",
     "bedType": "Couchage",
     "gallery": "Galerie photos",
+    "unavailable": "Actuellement indisponible",
     "champagne": {
       "name": "Champagne",
-      "description": "Une chambre élégante aux tons dorés, évoquant le raffinement et la douceur de vivre provençale.",
+      "description": "Une chambre élégante baignée de lumière chaleureuse, évoquant le raffinement et la douceur de vivre provençale.",
       "bed": "Lit convertible simple/double"
     },
     "nid": {
@@ -43,7 +44,7 @@
     },
     "nartuby": {
       "name": "Nartuby",
-      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique. Située dans l'annexe indépendante.",
+      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique.",
       "bed": "Lit double"
     },
     "lavande": {
@@ -51,11 +52,18 @@
       "description": "Baignée de senteurs provençales, cette chambre invite à la détente et à la sérénité.",
       "bed": "Lit double (1,8m x 2m)"
     },
+    "rose": {
+      "name": "Rosé",
+      "description": "Une charmante chambre simple aux tons rosés avec sa propre salle d'eau. Idéale pour les voyageurs solo ou en complément de la chambre Créatif pour les familles.",
+      "bed": "Lit simple"
+    },
     "bookOnAirbnb": "Réserver sur Airbnb",
     "amenities": {
       "wifi": "Wi-Fi gratuit",
       "privateBathroom": "Salle de bain privée",
       "sharedBathroom": "Salle de bain partagée",
+      "privateShowerSharedWC": "Douche privée, WC dans le couloir (partagé)",
+      "privateBathroomEnSuite": "Salle d'eau privée (WC inclus)",
       "linens": "Draps et linge de toilette fournis",
       "bodycare": "Gel douche et shampooing inclus",
       "premiumBedding": "Literie haut de gamme (qualité allemande)",
@@ -67,5 +75,21 @@
       "evCharging": "Bornes de recharge électrique à proximité",
       "busStop": "Arrêt de bus à 200m"
     }
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "normalSeason": "Tarif normal",
+    "holidaySeason": "Tarif vacances",
+    "perPersonPerNight": "Par personne / nuit",
+    "secondPerson": "2ème personne supplément",
+    "breakfast": "Petit-déjeuner",
+    "touristTax": "Taxe de séjour",
+    "touristTaxNote": "par personne / nuit",
+    "holidayPeriods": "Périodes de vacances 2026",
+    "holidayPeriod1": "11 avril – 27 avril (vacances de Pâques)",
+    "holidayPeriod2": "4 juillet – 30 août (vacances d'été)",
+    "holidayPeriod3": "17 octobre – 1er novembre (vacances de la Toussaint)",
+    "holidayPeriod4": "19 décembre – 2 janvier 2027 (vacances de Noël)",
+    "breakfastTimes": "Petit-déjeuner : 8h00 – 10h00"
   }
 }

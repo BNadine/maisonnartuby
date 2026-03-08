@@ -23,7 +23,7 @@ const rooms = getAllRooms();
         v-for="room in rooms"
         :key="room.slug"
         :to="`/rooms/${room.slug}`"
-        class="room-card"
+        :class="['room-card', { 'room-card--unavailable': room.status === 'unavailable' }]"
       >
         <div class="room-image-wrapper">
           <img
@@ -32,6 +32,9 @@ const rooms = getAllRooms();
             class="room-image"
             loading="lazy"
           >
+          <div v-if="room.status === 'unavailable'" class="unavailable-badge">
+            {{ t("rooms.unavailable") }}
+          </div>
         </div>
         <div class="room-info">
           <h2 class="room-name">{{ t(room.nameKey) }}</h2>
@@ -113,21 +116,38 @@ const rooms = getAllRooms();
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+.room-card--unavailable .room-image {
+  filter: grayscale(100%);
+}
+
 .room-image-wrapper {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  position: relative;
 }
 
 .room-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.3s ease;
 }
 
 .room-card:hover .room-image {
   transform: scale(1.05);
+}
+
+.unavailable-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: "Georgia", serif;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
 }
 
 .room-info {

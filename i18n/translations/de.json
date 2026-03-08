@@ -26,9 +26,10 @@
     "houseAmenitiesTitle": "Haus & Umgebung",
     "bedType": "Schlafplatz",
     "gallery": "Fotogalerie",
+    "unavailable": "Derzeit nicht verfügbar",
     "champagne": {
       "name": "Champagne",
-      "description": "Ein elegantes Zimmer in goldenen Tönen, das die Raffinesse und das sanfte Lebensgefühl der Provence hervorruft.",
+      "description": "Ein elegantes Zimmer mit warmem Licht, das die Raffinesse und das sanfte Lebensgefühl der Provence hervorruft.",
       "bed": "Verwandelbares Einzel-/Doppelbett"
     },
     "nid": {
@@ -43,7 +44,7 @@
     },
     "nartuby": {
       "name": "Nartuby",
-      "description": "Das Signaturzimmer des Hauses mit atemberaubendem Blick und authentischer Atmosphäre. Im separaten Anbau gelegen.",
+      "description": "Das Signaturzimmer des Hauses mit atemberaubendem Blick und authentischer Atmosphäre.",
       "bed": "Doppelbett"
     },
     "lavande": {
@@ -51,11 +52,18 @@
       "description": "Getaucht in provenzalische Düfte, lädt dieses Zimmer zu Entspannung und Gelassenheit ein.",
       "bed": "Doppelbett (1,8m x 2m)"
     },
+    "rose": {
+      "name": "Rosé",
+      "description": "Ein charmantes Einzelzimmer in zarten Rosétönen mit eigenem Duschbad. Ideal für Alleinreisende oder als Ergänzung zum Zimmer Kreativ für Familien.",
+      "bed": "Einzelbett"
+    },
     "bookOnAirbnb": "Auf Airbnb buchen",
     "amenities": {
       "wifi": "Kostenloses WLAN",
       "privateBathroom": "Eigenes Badezimmer",
       "sharedBathroom": "Gemeinschaftsbad",
+      "privateShowerSharedWC": "Eigene Dusche, WC am Flur (geteilt)",
+      "privateBathroomEnSuite": "Eigenes Duschbad (inkl. WC)",
       "linens": "Bettwäsche und Handtücher inklusive",
       "bodycare": "Duschgel und Shampoo inklusive",
       "premiumBedding": "Premium-Betten und Matratzen (deutsche Qualität)",
@@ -67,5 +75,21 @@
       "evCharging": "E-Ladestationen in der Nähe",
       "busStop": "Bushaltestelle 200m entfernt"
     }
+  },
+  "pricing": {
+    "title": "Preise",
+    "normalSeason": "Normalpreis",
+    "holidaySeason": "Ferienpreis",
+    "perPersonPerNight": "Pro Person / Nacht",
+    "secondPerson": "2. Person Aufpreis",
+    "breakfast": "Frühstück",
+    "touristTax": "Kurtaxe",
+    "touristTaxNote": "pro Person / Nacht",
+    "holidayPeriods": "Ferienzeiträume 2026",
+    "holidayPeriod1": "11. April – 27. April (Osterferien)",
+    "holidayPeriod2": "4. Juli – 30. August (Sommerferien)",
+    "holidayPeriod3": "17. Oktober – 1. November (Herbstferien)",
+    "holidayPeriod4": "19. Dezember – 2. Januar 2027 (Weihnachtsferien)",
+    "breakfastTimes": "Frühstück: 8:00 – 10:00 Uhr"
   }
 }
