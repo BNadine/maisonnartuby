@@ -16,8 +16,8 @@
     "disclaimerText": "The content of this website is provided for informational purposes only. We do not guarantee the accuracy, completeness, or timeliness of the information provided."
   },
   "rooms": {
-    "discover": "Discover our rooms",
-    "title": "Our Rooms",
+    "discover": "Discover the rooms",
+    "title": "The Rooms",
     "backToHome": "Home",
     "backToRooms": "All rooms",
     "capacity": "Capacity",
@@ -74,6 +74,62 @@
       "freeParking": "Free public parking nearby",
       "evCharging": "EV charging stations nearby",
       "busStop": "Bus stop 200m away"
+    }
+  },
+  "home": {
+    "heroText": "A hidden gem on the Nartuby",
+    "heroSubtext": "Chambres d'hôtes in Provence",
+    "contactUs": "Write to us",
+    "nav": {
+      "home": "Home",
+      "story": "Story",
+      "rooms": "Rooms",
+      "garden": "Garden",
+      "location": "Location",
+      "amenities": "Included",
+      "contact": "Contact",
+      "pricing": "Prices"
+    },
+    "welcome": {
+      "tagline": "The Story",
+      "title": "Where time stands still for a moment",
+      "text1": "Some places aren't found – they find you. Maison Nartuby is one of those places. Tucked behind tall plane trees, right on the banks of the river it's named after, this 1930s villa hides like a well-kept secret in the heart of La Motte.",
+      "text2": "Here, the sounds of nature blend with the gentle murmur of the water. The neighbouring nature reserve provides a backdrop you'd normally only find in picture books – and one you get to rediscover every morning when you wake."
+    },
+    "comfort": {
+      "tagline": "The Rooms",
+      "title": "Arrive. Breathe. Feel at home.",
+      "text1": "Each of my rooms tells its own story. Thoughtfully furnished with an intuitive sense for the balance between historic charm and contemporary comfort. The walls breathe the elegance of decades past, while new premium beds and high-quality down duvets ensure a restful night's sleep.",
+      "text2": "Whether travelling solo or as a couple, you'll find your own personal retreat here. Bed linen, towels, toiletries – everything is prepared for you. All you need to do is arrive."
+    },
+    "outdoor": {
+      "tagline": "Outdoors",
+      "title": "Your garden in Provence",
+      "text": "The terrace will quickly become your favourite spot. Have breakfast beneath the canopy of centuries-old plane trees, read a book, or simply watch the river flow by – the spacious garden and direct access to the Nartuby make every moment of the day something special. The tall trees provide natural shade and keep the house pleasantly cool even in summer – no air conditioning needed."
+    },
+    "location": {
+      "tagline": "The Location",
+      "title": "In the heart of the village, surrounded by nature",
+      "text": "As peaceful and close to nature as the guest house may be, you're by no means isolated. Bakery, supermarket, pharmacy and a choice of restaurants are all within easy walking distance. A bus stop is just 200 metres away, and free parking spaces as well as EV charging stations can be found in the immediate vicinity."
+    },
+    "amenities": {
+      "tagline": "Included",
+      "title": "Everything you need",
+      "beds": "Premium beds & mattresses, German quality",
+      "duvets": "High-quality down duvets",
+      "linens": "Bed linen & towels",
+      "bodycare": "Soap & shampoo",
+      "cooling": "Natural cooling from the plane trees",
+      "coffee": "Coffee machine",
+      "keybox": "Flexible key box access",
+      "parking": "Free public parking",
+      "evCharging": "EV charging stations nearby",
+      "bus": "Bus stop 200m away"
+    },
+    "contact": {
+      "tagline": "Contact",
+      "title": "I look forward to hearing from you",
+      "text": "Questions, special requests or a no-obligation room enquiry – just drop me a line. I'll get back to you personally."
     }
   },
   "pricing": {

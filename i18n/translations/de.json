@@ -16,8 +16,8 @@
     "disclaimerText": "Die Inhalte dieser Website dienen ausschließlich zu Informationszwecken. Wir übernehmen keine Gewähr für die Richtigkeit, Vollständigkeit oder Aktualität der bereitgestellten Informationen."
   },
   "rooms": {
-    "discover": "Unsere Zimmer entdecken",
-    "title": "Unsere Zimmer",
+    "discover": "Die Zimmer entdecken",
+    "title": "Die Zimmer",
     "backToHome": "Startseite",
     "backToRooms": "Alle Zimmer",
     "capacity": "Kapazität",
@@ -74,6 +74,62 @@
       "freeParking": "Kostenlose öffentliche Parkplätze in der Nähe",
       "evCharging": "E-Ladestationen in der Nähe",
       "busStop": "Bushaltestelle 200m entfernt"
+    }
+  },
+  "home": {
+    "heroText": "Ein verstecktes Juwel an der Nartuby",
+    "heroSubtext": "Chambres d'hôtes in der Provence",
+    "contactUs": "Schreiben Sie uns",
+    "nav": {
+      "home": "Home",
+      "story": "Geschichte",
+      "rooms": "Zimmer",
+      "garden": "Garten",
+      "location": "Lage",
+      "amenities": "Inklusive",
+      "contact": "Kontakt",
+      "pricing": "Preise"
+    },
+    "welcome": {
+      "tagline": "Die Geschichte",
+      "title": "Wo die Zeit einen Moment lang stillsteht",
+      "text1": "Manche Orte findet man nicht – sie finden einen. Das Gästehaus Nartuby ist so ein Ort. Versteckt hinter hohen Platanen, direkt am Ufer des gleichnamigen Flusses, liegt diese Villa aus den 1930er-Jahren wie ein gut gehütetes Geheimnis im Herzen von La Motte.",
+      "text2": "Hier vermischen sich die Klänge der Natur mit dem leisen Rauschen des Wassers. Das angrenzende Naturschutzgebiet sorgt für eine Kulisse, die man sonst nur aus Bilderbüchern kennt – und die man hier jeden Morgen beim Aufwachen neu erleben darf."
+    },
+    "comfort": {
+      "tagline": "Die Zimmer",
+      "title": "Ankommen. Durchatmen. Wohlfühlen.",
+      "text1": "Jedes meiner Zimmer erzählt seine eigene Geschichte. Liebevoll eingerichtet, mit einem feinen Gespür für die Balance zwischen historischem Charme und zeitgemäßem Komfort. Die Wände atmen die Eleganz vergangener Jahrzehnte, während neue Premium-Betten und hochwertige Daunendecken für erholsamen Schlaf sorgen.",
+      "text2": "Ob Sie alleine reisen oder zu zweit – hier finden Sie Ihren persönlichen Rückzugsort. Bettwäsche, Handtücher, Pflegeprodukte: Alles ist für Sie vorbereitet. Sie müssen nur noch ankommen."
+    },
+    "outdoor": {
+      "tagline": "Draußen",
+      "title": "Ihr Garten in der Provence",
+      "text": "Die Terrasse wird schnell zu Ihrem Lieblingsplatz. Unter dem Blätterdach jahrhundertealter Platanen frühstücken, ein Buch lesen oder einfach dem Fluss beim Fließen zusehen – der weitläufige Garten und der direkte Zugang zur Nartuby machen jede Tageszeit zu etwas Besonderem. Die hohen Bäume spenden natürlichen Schatten und halten das Haus auch im Sommer angenehm kühl – ganz ohne Klimaanlage."
+    },
+    "location": {
+      "tagline": "Die Lage",
+      "title": "Mitten im Leben, umgeben von Natur",
+      "text": "So ruhig und naturnah das Gästehaus auch liegt – Sie sind keineswegs abgeschieden. Bäckerei, Supermarkt, Apotheke und eine Auswahl an Restaurants erreichen Sie bequem zu Fuß. Eine Bushaltestelle liegt nur 200 Meter entfernt, kostenlose Parkplätze und E-Ladestationen finden sich in unmittelbarer Nähe."
+    },
+    "amenities": {
+      "tagline": "Inklusive",
+      "title": "Alles, was Sie brauchen",
+      "beds": "Premium-Betten & Matratzen in deutscher Qualität",
+      "duvets": "Hochwertige Daunendecken",
+      "linens": "Bettwäsche & Handtücher",
+      "bodycare": "Seife & Shampoo",
+      "cooling": "Natürliche Kühlung durch Platanen",
+      "coffee": "Kaffeemaschine",
+      "keybox": "Flexibler Zugang per Schlüsselbox",
+      "parking": "Kostenlose öffentliche Parkplätze",
+      "evCharging": "E-Ladestationen in der Nähe",
+      "bus": "Bushaltestelle in 200m"
+    },
+    "contact": {
+      "tagline": "Kontakt",
+      "title": "Ich freue mich auf Ihre Nachricht",
+      "text": "Ob Fragen, Wünsche oder eine unverbindliche Zimmeranfrage – schreiben Sie mir gerne. Ich melde mich persönlich bei Ihnen."
     }
   },
   "pricing": {
