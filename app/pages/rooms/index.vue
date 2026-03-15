@@ -8,13 +8,10 @@ const rooms = getAllRooms();
 <template>
   <div class="rooms-page">
     <header class="page-header">
-      <nav class="breadcrumb">
-        <NuxtLink to="/" class="nav-link">
-          {{ t("rooms.backToHome") }}
-        </NuxtLink>
-        <span class="separator">/</span>
-        <span class="current">{{ t("rooms.title") }}</span>
-      </nav>
+      <PageBreadcrumb :items="[
+        { label: t('rooms.backToHome'), to: '/' },
+        { label: t('rooms.title') },
+      ]" />
       <h1 class="page-title">{{ t("rooms.title") }}</h1>
     </header>
 
@@ -56,32 +53,6 @@ const rooms = getAllRooms();
   max-width: 1200px;
   margin: 0 auto 3rem;
   padding-top: 1rem;
-}
-
-.breadcrumb {
-  font-family: "Georgia", serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link {
-  color: var(--ui-color-primary-700);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--ui-color-primary-500);
-}
-
-.separator {
-  color: #999;
-}
-
-.current {
-  color: #666;
 }
 
 .page-title {

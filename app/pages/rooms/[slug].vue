@@ -51,17 +51,11 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
 <template>
   <div v-if="room" class="room-page">
     <header class="page-header">
-      <nav class="breadcrumb">
-        <NuxtLink to="/" class="nav-link">
-          {{ t("rooms.backToHome") }}
-        </NuxtLink>
-        <span class="separator">/</span>
-        <NuxtLink to="/rooms" class="nav-link">
-          {{ t("rooms.title") }}
-        </NuxtLink>
-        <span class="separator">/</span>
-        <span class="current">{{ t(room.nameKey) }}</span>
-      </nav>
+      <PageBreadcrumb :items="[
+        { label: t('rooms.backToHome'), to: '/' },
+        { label: t('rooms.title'), to: '/rooms' },
+        { label: t(room.nameKey) },
+      ]" />
     </header>
 
     <div class="room-content">
@@ -189,33 +183,6 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
   margin: 0 auto;
   padding-top: 1rem;
   margin-bottom: 2rem;
-}
-
-.breadcrumb {
-  font-family: "Georgia", serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.nav-link {
-  color: var(--ui-color-primary-700);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--ui-color-primary-500);
-}
-
-.separator {
-  color: #999;
-}
-
-.current {
-  color: #666;
 }
 
 .room-content {
