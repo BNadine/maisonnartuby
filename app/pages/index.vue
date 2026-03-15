@@ -83,6 +83,10 @@ html {
   grid-template-columns: 160px 1fr;
 }
 
+.content {
+  border-left: 1px solid #f0eeeb;
+}
+
 /* ─── Typography ─── */
 .lead {
   font-size: 1.05rem;

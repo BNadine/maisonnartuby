@@ -60,7 +60,6 @@ onMounted(() => {
   align-self: start;
   max-height: 100vh;
   padding: 2.5rem 0 2.5rem 0;
-  border-right: 1px solid #f0eeeb;
   overflow-y: auto;
 }
 
