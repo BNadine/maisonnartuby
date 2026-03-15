@@ -150,4 +150,14 @@ html {
     font-size: 0.98rem;
   }
 }
+
+@media print {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    border-left: none;
+  }
+}
 </style>

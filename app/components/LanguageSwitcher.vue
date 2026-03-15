@@ -33,4 +33,10 @@ const selectedLocale = computed({
     right: 1rem;
   }
 }
+
+@media print {
+  .language-switcher {
+    display: none;
+  }
+}
 </style>

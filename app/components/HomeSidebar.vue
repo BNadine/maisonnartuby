@@ -100,4 +100,10 @@ onMounted(() => {
     display: none;
   }
 }
+
+@media print {
+  .sidebar {
+    display: none;
+  }
+}
 </style>

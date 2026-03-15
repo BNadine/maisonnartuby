@@ -46,4 +46,15 @@ const { t } = useI18n();
     padding: 0.7rem 1.6rem;
   }
 }
+
+@media print {
+  .body-text {
+    color: #444;
+  }
+
+  .email-btn {
+    color: #2c2c2c;
+    border-color: #ccc;
+  }
+}
 </style>

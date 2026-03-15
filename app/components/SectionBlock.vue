@@ -92,4 +92,22 @@ defineProps<{
     font-size: 1.6rem;
   }
 }
+
+@media print {
+  .section-dark {
+    background: none;
+  }
+
+  .tagline-light {
+    color: #999;
+  }
+
+  .section-title-light {
+    color: #2c2c2c;
+  }
+
+  .section-divider-light {
+    background: #ccc;
+  }
+}
 </style>

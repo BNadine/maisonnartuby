@@ -28,4 +28,10 @@ const { t } = useI18n();
 .footer-link:hover {
   color: var(--ui-color-primary-600);
 }
+
+@media print {
+  .site-footer {
+    display: none;
+  }
+}
 </style>
