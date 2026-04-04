@@ -17,9 +17,9 @@
     "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@nuxt/ui": "^4.4.0",
-    "@nuxtjs/i18n": "^10.2.3",
-    "nuxt": "^4.2.2",
+    "@nuxt/ui": "^4.6.1",
+    "@nuxtjs/i18n": "^10.2.4",
+    "nuxt": "^4.4.2",
     "tailwindcss": "^4.1.18",
     "vue": "^3.5.26",
     "vue-router": "^4.6.4"
