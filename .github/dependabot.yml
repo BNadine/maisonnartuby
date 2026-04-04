@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      nuxt:
+        patterns:
+          - "@nuxt/*"
+          - "@nuxtjs/*"
+          - "nuxt"
+      vue:
+        patterns:
+          - "vue"
+          - "vue-router"
+      testing:
+        patterns:
+          - "@playwright/*"
+          - "@vue/test-utils"
+          - "@nuxt/test-utils"
+          - "vitest"
+          - "happy-dom"
+      linting:
+        patterns:
+          - "eslint"
+          - "@nuxt/eslint"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
