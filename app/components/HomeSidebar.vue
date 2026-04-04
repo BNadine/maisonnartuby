@@ -67,6 +67,8 @@ onMounted(() => {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: auto;
+  width: 160px;
 }
 
 .sidebar li {
@@ -80,7 +82,7 @@ onMounted(() => {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
-  color: #bbb;
+  color: #888;
   padding: 0.4rem 0.8rem 0.4rem 1.5rem;
   border-left: 2px solid transparent;
   transition: all 0.25s ease;

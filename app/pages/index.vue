@@ -73,14 +73,13 @@ html {
 .landing-page {
   width: 100%;
   min-height: 100vh;
-  max-width: 1200px;
-  margin: 0 auto;
+  overflow-x: clip;
 }
 
 /* ─── Main Layout ─── */
 .main-layout {
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: max(160px, calc((100vw - 1200px) / 2 + 160px)) 1fr;
 }
 
 .content {
@@ -136,10 +135,6 @@ html {
 
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
-  .landing-page {
-    max-width: 100%;
-  }
-
   .main-layout {
     grid-template-columns: 1fr;
   }
