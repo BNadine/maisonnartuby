@@ -8,13 +8,11 @@ const rooms = getAllRooms();
 <template>
   <div class="rooms-page">
     <header class="page-header">
-      <nav class="breadcrumb">
-        <NuxtLink to="/" class="nav-link">
-          {{ t("rooms.backToHome") }}
-        </NuxtLink>
-        <span class="separator">/</span>
-        <span class="current">{{ t("rooms.title") }}</span>
-      </nav>
+      <PageBreadcrumb
+:items="[
+        { label: t('rooms.backToHome'), to: '/' },
+        { label: t('rooms.title') },
+      ]" />
       <h1 class="page-title">{{ t("rooms.title") }}</h1>
     </header>
 
@@ -23,7 +21,7 @@ const rooms = getAllRooms();
         v-for="room in rooms"
         :key="room.slug"
         :to="`/rooms/${room.slug}`"
-        class="room-card"
+        :class="['room-card', { 'room-card--unavailable': room.status === 'unavailable' }]"
       >
         <div class="room-image-wrapper">
           <img
@@ -32,6 +30,9 @@ const rooms = getAllRooms();
             class="room-image"
             loading="lazy"
           >
+          <div v-if="room.status === 'unavailable'" class="unavailable-badge">
+            {{ t("rooms.unavailable") }}
+          </div>
         </div>
         <div class="room-info">
           <h2 class="room-name">{{ t(room.nameKey) }}</h2>
@@ -53,32 +54,6 @@ const rooms = getAllRooms();
   max-width: 1200px;
   margin: 0 auto 3rem;
   padding-top: 1rem;
-}
-
-.breadcrumb {
-  font-family: "Georgia", serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link {
-  color: var(--ui-color-primary-700);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--ui-color-primary-500);
-}
-
-.separator {
-  color: #999;
-}
-
-.current {
-  color: #666;
 }
 
 .page-title {
@@ -113,21 +88,38 @@ const rooms = getAllRooms();
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
+.room-card--unavailable .room-image {
+  filter: grayscale(100%);
+}
+
 .room-image-wrapper {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  position: relative;
 }
 
 .room-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, filter 0.3s ease;
 }
 
 .room-card:hover .room-image {
   transform: scale(1.05);
+}
+
+.unavailable-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-family: "Georgia", serif;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
 }
 
 .room-info {

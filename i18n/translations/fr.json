@@ -16,8 +16,8 @@
     "disclaimerText": "Le contenu de ce site est fourni à titre informatif uniquement. Nous ne garantissons pas l'exactitude, l'exhaustivité ou l'actualité des informations fournies."
   },
   "rooms": {
-    "discover": "Découvrir nos chambres",
-    "title": "Nos Chambres",
+    "discover": "Découvrir les chambres",
+    "title": "Les Chambres",
     "backToHome": "Accueil",
     "backToRooms": "Toutes les chambres",
     "capacity": "Capacité",
@@ -26,9 +26,10 @@
     "houseAmenitiesTitle": "Maison & Environs",
     "bedType": "Couchage",
     "gallery": "Galerie photos",
+    "unavailable": "Actuellement indisponible",
     "champagne": {
       "name": "Champagne",
-      "description": "Une chambre élégante aux tons dorés, évoquant le raffinement et la douceur de vivre provençale.",
+      "description": "Une chambre élégante baignée de lumière chaleureuse, évoquant le raffinement et la douceur de vivre provençale.",
       "bed": "Lit convertible simple/double"
     },
     "nid": {
@@ -43,7 +44,7 @@
     },
     "nartuby": {
       "name": "Nartuby",
-      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique. Située dans l'annexe indépendante.",
+      "description": "La chambre signature de la maison, offrant une vue imprenable et une atmosphère authentique.",
       "bed": "Lit double"
     },
     "lavande": {
@@ -51,11 +52,18 @@
       "description": "Baignée de senteurs provençales, cette chambre invite à la détente et à la sérénité.",
       "bed": "Lit double (1,8m x 2m)"
     },
+    "rose": {
+      "name": "Rosé",
+      "description": "Une charmante chambre simple aux tons rosés avec sa propre salle d'eau. Idéale pour les voyageurs solo ou en complément de la chambre Créatif pour les familles.",
+      "bed": "Lit simple"
+    },
     "bookOnAirbnb": "Réserver sur Airbnb",
     "amenities": {
       "wifi": "Wi-Fi gratuit",
       "privateBathroom": "Salle de bain privée",
       "sharedBathroom": "Salle de bain partagée",
+      "privateShowerSharedWC": "Douche privée, WC dans le couloir (partagé)",
+      "privateBathroomEnSuite": "Salle d'eau privée (WC inclus)",
       "linens": "Draps et linge de toilette fournis",
       "bodycare": "Gel douche et shampooing inclus",
       "premiumBedding": "Literie haut de gamme (qualité allemande)",
@@ -67,5 +75,77 @@
       "evCharging": "Bornes de recharge électrique à proximité",
       "busStop": "Arrêt de bus à 200m"
     }
+  },
+  "home": {
+    "heroText": "Un joyau caché sur la Nartuby",
+    "heroSubtext": "Chambres d'hôtes en Provence",
+    "contactUs": "Écrivez-nous",
+    "nav": {
+      "home": "Accueil",
+      "story": "Histoire",
+      "rooms": "Chambres",
+      "garden": "Jardin",
+      "location": "Situation",
+      "amenities": "Inclus",
+      "contact": "Contact",
+      "pricing": "Tarifs"
+    },
+    "welcome": {
+      "tagline": "L'histoire",
+      "title": "Là où le temps suspend son vol",
+      "text1": "Certains lieux ne se trouvent pas – ce sont eux qui vous trouvent. La Maison Nartuby est l'un de ces lieux. Nichée derrière de grands platanes, au bord de la rivière dont elle porte le nom, cette villa des années 1930 se cache comme un secret bien gardé au cœur de La Motte.",
+      "text2": "Ici, les sons de la nature se mêlent au doux murmure de l'eau. La réserve naturelle voisine offre un décor que l'on croirait sorti d'un livre d'images – et que l'on redécouvre chaque matin au réveil."
+    },
+    "comfort": {
+      "tagline": "Les chambres",
+      "title": "Arriver. Respirer. Se sentir chez soi.",
+      "text1": "Chacune de mes chambres raconte sa propre histoire. Aménagées avec soin, elles trouvent le juste équilibre entre le charme historique et le confort contemporain. Les murs respirent l'élégance des décennies passées, tandis que des lits haut de gamme et des couettes en duvet de qualité supérieure vous garantissent un sommeil réparateur.",
+      "text2": "Que vous voyagiez seul ou à deux, vous trouverez ici votre refuge personnel. Draps, serviettes, produits de soin : tout est préparé pour vous. Il ne vous reste plus qu'à arriver."
+    },
+    "outdoor": {
+      "tagline": "En plein air",
+      "title": "Votre jardin en Provence",
+      "text": "La terrasse deviendra vite votre endroit préféré. Prendre le petit-déjeuner sous la canopée de platanes centenaires, lire un livre ou simplement regarder la rivière couler – le vaste jardin et l'accès direct à la Nartuby font de chaque moment de la journée un instant précieux. Les grands arbres offrent une ombre naturelle et gardent la maison agréablement fraîche, même en été – sans climatisation."
+    },
+    "location": {
+      "tagline": "La situation",
+      "title": "Au cœur du village, entouré de nature",
+      "text": "Aussi paisible et proche de la nature que soit la maison, vous n'êtes nullement isolé. Boulangerie, supermarché, pharmacie et un choix de restaurants sont accessibles à pied. Un arrêt de bus se trouve à seulement 200 mètres, et des places de parking gratuites ainsi que des bornes de recharge électrique sont à proximité immédiate."
+    },
+    "amenities": {
+      "tagline": "Inclus",
+      "title": "Tout ce dont vous avez besoin",
+      "beds": "Lits et matelas haut de gamme, qualité allemande",
+      "duvets": "Couettes en duvet de qualité supérieure",
+      "linens": "Draps et serviettes de toilette",
+      "bodycare": "Savon et shampooing",
+      "cooling": "Rafraîchissement naturel par les platanes",
+      "coffee": "Machine à café",
+      "keybox": "Accès flexible par boîte à clés",
+      "parking": "Parking public gratuit",
+      "evCharging": "Bornes de recharge électrique à proximité",
+      "bus": "Arrêt de bus à 200m"
+    },
+    "contact": {
+      "tagline": "Contact",
+      "title": "Je me réjouis de votre message",
+      "text": "Questions, souhaits ou demande de chambre sans engagement – écrivez-moi. Je vous répondrai personnellement."
+    }
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "normalSeason": "Tarif normal",
+    "holidaySeason": "Tarif vacances",
+    "perPersonPerNight": "Par personne / nuit",
+    "secondPerson": "2ème personne supplément",
+    "breakfast": "Petit-déjeuner",
+    "touristTax": "Taxe de séjour",
+    "touristTaxNote": "par personne / nuit",
+    "holidayPeriods": "Périodes de vacances 2026",
+    "holidayPeriod1": "11 avril – 27 avril (vacances de Pâques)",
+    "holidayPeriod2": "4 juillet – 30 août (vacances d'été)",
+    "holidayPeriod3": "17 octobre – 1er novembre (vacances de la Toussaint)",
+    "holidayPeriod4": "19 décembre – 2 janvier 2027 (vacances de Noël)",
+    "breakfastTimes": "Petit-déjeuner : 8h00 – 10h00"
   }
 }

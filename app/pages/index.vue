@@ -1,29 +1,56 @@
 <script setup lang="ts">
 const { t } = useI18n();
+
+const navItems = [
+  { id: 'home', key: 'home.nav.home' },
+  { id: 'story', key: 'home.nav.story' },
+  { id: 'rooms', key: 'home.nav.rooms' },
+  { id: 'garden', key: 'home.nav.garden' },
+  { id: 'location', key: 'home.nav.location' },
+  { id: 'amenities', key: 'home.nav.amenities' },
+  { id: 'contact', key: 'home.nav.contact' },
+  { id: 'pricing', key: 'home.nav.pricing' },
+];
 </script>
 
 <template>
   <div class="landing-page">
-    <div class="hero">
-      <div class="hero-image"/>
-      <div class="overlay"/>
+    <div class="main-layout">
+      <HomeSidebar :nav-items="navItems" />
+
       <div class="content">
-        <h1 class="title">{{ t("title") }}</h1>
-        <p class="address">{{ t("address1") }}</p>
-        <p class="address">{{ t("address2") }}</p>
-        <p class="website">{{ t("website") }}</p>
-        <a :href="`mailto:${t('email')}`" class="email">{{ t("email") }}</a>
-        <div class="rooms-link-wrapper">
-          <NuxtLink to="/rooms" class="rooms-link">
+        <HomeHero />
+
+        <!-- Story -->
+        <SectionBlock id="story" :tagline="t('home.welcome.tagline')" :title="t('home.welcome.title')">
+          <p class="lead">{{ t("home.welcome.text1") }}</p>
+          <p class="body-text">{{ t("home.welcome.text2") }}</p>
+        </SectionBlock>
+
+        <!-- Rooms -->
+        <SectionBlock id="rooms" :tagline="t('home.comfort.tagline')" :title="t('home.comfort.title')" variant="tinted">
+          <p class="lead">{{ t("home.comfort.text1") }}</p>
+          <p class="body-text">{{ t("home.comfort.text2") }}</p>
+          <NuxtLink to="/rooms" class="inline-link">
             {{ t("rooms.discover") }}
+            <span class="arrow">&rarr;</span>
           </NuxtLink>
-        </div>
+        </SectionBlock>
+
+        <!-- Garden -->
+        <SectionBlock id="garden" :tagline="t('home.outdoor.tagline')" :title="t('home.outdoor.title')">
+          <p class="lead">{{ t("home.outdoor.text") }}</p>
+        </SectionBlock>
+
+        <!-- Location -->
+        <SectionBlock id="location" :tagline="t('home.location.tagline')" :title="t('home.location.title')" variant="tinted">
+          <p class="lead">{{ t("home.location.text") }}</p>
+        </SectionBlock>
+
+        <HomeAmenities />
+        <HomeContact />
+        <HomePricing />
       </div>
-    </div>
-    <div class="landing-footer">
-      <NuxtLink to="/impressum" class="landing-footer-link">
-        {{ t("footer.impressum") }}
-      </NuxtLink>
     </div>
   </div>
 </template>
@@ -44,195 +71,88 @@ html {
 }
 
 .landing-page {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: clip;
 }
 
-.hero {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/hero-background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+/* ─── Main Layout ─── */
+.main-layout {
+  display: grid;
+  grid-template-columns: max(160px, calc((100vw - 1200px) / 2 + 160px)) 1fr;
 }
 
 .content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding: 2rem;
+  border-left: 1px solid #f0eeeb;
 }
 
-.content a {
-  color: white;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.title {
-  font-family: "Georgia", serif;
-  font-size: 4rem;
+/* ─── Typography ─── */
+.lead {
+  font-size: 1.05rem;
   font-weight: 300;
-  letter-spacing: 3px;
+  line-height: 1.9;
+  color: #444;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  max-width: 580px;
 }
 
-.address {
-  font-family: "Georgia", serif;
-  font-size: 1.5rem;
+.body-text {
+  font-size: 0.98rem;
   font-weight: 300;
-  font-style: italic;
-  opacity: 0.95;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin: 0.5rem 0;
+  line-height: 1.85;
+  color: #666;
+  margin-bottom: 0.8rem;
+  max-width: 580px;
 }
 
-.website {
-  font-family: "Georgia", serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-  opacity: 0.95;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin: 0.5rem 0;
-}
-
-.email {
-  font-family: "Georgia", serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-style: italic;
-  opacity: 0.95;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  margin: 0.5rem 0;
-  color: white;
-  text-decoration: none;
+.inline-link {
   display: inline-block;
-  position: relative;
-  transition: all 0.3s ease;
-  padding: 0.2rem 0.5rem;
-}
-
-.email::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.8);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.email:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-}
-
-.email:hover::after {
-  width: 100%;
-}
-
-.rooms-link-wrapper {
-  margin-top: 2.5rem;
-}
-
-.rooms-link {
-  font-family: "Georgia", serif;
-  font-size: 1.2rem;
-  font-weight: 300;
+  margin-top: 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: white;
+  color: #2c2c2c;
   text-decoration: none;
-  padding: 0.8rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 3px;
+  border-bottom: 1px solid #ccc;
   transition: all 0.3s ease;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  display: inline-block;
-  max-width: 90vw;
-  text-align: center;
 }
 
-.rooms-link:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: white;
-  transform: translateY(-2px);
+.inline-link:hover {
+  border-color: #2c2c2c;
+}
+
+.inline-link .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  margin-left: 4px;
+}
+
+.inline-link:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
-    letter-spacing: 2px;
-  }
-
-  .address {
-    font-size: 1.2rem;
-  }
-
-  .website {
-    font-size: 1.2rem;
-  }
-
-  .email {
-    font-size: 1.2rem;
-  }
-
-  .rooms-link {
-    font-size: 1rem;
-    padding: 0.6rem 1.5rem;
+  .lead {
+    font-size: 0.98rem;
   }
 }
 
-.landing-footer {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
-}
+@media print {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
 
-.landing-footer-link {
-  font-family: "Georgia", serif;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.landing-footer-link:hover {
-  color: rgba(255, 255, 255, 0.9);
+  .content {
+    border-left: none;
+  }
 }
 </style>

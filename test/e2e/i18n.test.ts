@@ -8,29 +8,29 @@ async function switchLanguage(page: Page, label: string) {
 test.describe("Language Switching", () => {
   test("page loads in French by default", async ({ page }) => {
     await page.goto("/rooms");
-    await expect(page.locator(".page-title")).toContainText("Nos Chambres");
+    await expect(page.locator(".page-title")).toContainText("Les Chambres");
   });
 
   test("switches to English", async ({ page }) => {
     await page.goto("/rooms");
-    await expect(page.locator(".page-title")).toContainText("Nos Chambres");
+    await expect(page.locator(".page-title")).toContainText("Les Chambres");
 
     await switchLanguage(page, "English");
-    await expect(page.locator(".page-title")).toContainText("Our Rooms");
+    await expect(page.locator(".page-title")).toContainText("The Rooms");
   });
 
   test("switches to German", async ({ page }) => {
     await page.goto("/rooms");
-    await expect(page.locator(".page-title")).toContainText("Nos Chambres");
+    await expect(page.locator(".page-title")).toContainText("Les Chambres");
 
     await switchLanguage(page, "Deutsch");
-    await expect(page.locator(".page-title")).toContainText("Unsere Zimmer");
+    await expect(page.locator(".page-title")).toContainText("Die Zimmer");
   });
 
   test("language persists across navigation", async ({ page }) => {
     await page.goto("/rooms");
     await switchLanguage(page, "English");
-    await expect(page.locator(".page-title")).toContainText("Our Rooms");
+    await expect(page.locator(".page-title")).toContainText("The Rooms");
 
     await page.locator(".room-card").first().click();
     await page.waitForURL(/\/rooms\/.+/);

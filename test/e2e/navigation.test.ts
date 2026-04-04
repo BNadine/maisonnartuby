@@ -3,24 +3,24 @@ import { test, expect } from "@playwright/test";
 test.describe("Navigation", () => {
   test("landing page loads with title and rooms link", async ({ page }) => {
     await page.goto("/");
-    await expect(page.locator(".title")).toContainText("Nartuby");
-    await expect(page.locator(".rooms-link")).toBeVisible();
+    await expect(page.locator(".hero-title")).toContainText("Nartuby");
+    await expect(page.locator(".btn-primary")).toBeVisible();
   });
 
   test("navigate from landing to rooms overview", async ({ page }) => {
     await page.goto("/");
-    await page.locator(".rooms-link").click();
+    await page.locator(".btn-primary").click();
     await page.waitForURL("/rooms");
     await expect(page.locator(".page-title")).toBeVisible();
-    await expect(page.locator(".room-card")).toHaveCount(5);
+    await expect(page.locator(".room-card")).toHaveCount(6);
   });
 
-  test("rooms overview shows all 5 room cards with images", async ({ page }) => {
+  test("rooms overview shows all 6 room cards with images", async ({ page }) => {
     await page.goto("/rooms");
     const cards = page.locator(".room-card");
-    await expect(cards).toHaveCount(5);
+    await expect(cards).toHaveCount(6);
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       await expect(cards.nth(i).locator(".room-image")).toBeVisible();
       await expect(cards.nth(i).locator(".room-name")).not.toBeEmpty();
     }
@@ -50,11 +50,11 @@ test.describe("Navigation", () => {
     await page.goto("/rooms");
     await page.locator(".breadcrumb a[href='/']").click();
     await page.waitForURL("/");
-    await expect(page.locator(".title")).toContainText("Nartuby");
+    await expect(page.locator(".hero-title")).toContainText("Nartuby");
   });
 
   test("all room slugs are accessible", async ({ page }) => {
-    const slugs = ["champagne", "nid", "creatif", "nartuby", "lavande"];
+    const slugs = ["champagne", "nid", "creatif", "nartuby", "lavande", "rose"];
     for (const slug of slugs) {
       await page.goto(`/rooms/${slug}`);
       await expect(page.locator(".room-title")).toBeVisible();

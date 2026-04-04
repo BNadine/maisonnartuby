@@ -5,13 +5,11 @@ const { t } = useI18n();
 <template>
   <div class="impressum-page">
     <header class="page-header">
-      <nav class="breadcrumb">
-        <NuxtLink to="/" class="nav-link">
-          {{ t("rooms.backToHome") }}
-        </NuxtLink>
-        <span class="separator">/</span>
-        <span class="current">{{ t("footer.impressum") }}</span>
-      </nav>
+      <PageBreadcrumb
+:items="[
+        { label: t('rooms.backToHome'), to: '/' },
+        { label: t('footer.impressum') },
+      ]" />
       <h1 class="page-title">{{ t("footer.impressum") }}</h1>
     </header>
 
@@ -56,32 +54,6 @@ const { t } = useI18n();
   max-width: 700px;
   margin: 0 auto 2rem;
   padding-top: 1rem;
-}
-
-.breadcrumb {
-  font-family: "Georgia", serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link {
-  color: var(--ui-color-primary-700);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--ui-color-primary-500);
-}
-
-.separator {
-  color: #999;
-}
-
-.current {
-  color: #666;
 }
 
 .page-title {

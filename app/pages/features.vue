@@ -5,11 +5,11 @@ const { isEnabled, toggle } = useFeatureFlags();
 <template>
   <div class="features-page">
     <header class="page-header">
-      <nav class="breadcrumb">
-        <NuxtLink to="/" class="nav-link">Home</NuxtLink>
-        <span class="separator">/</span>
-        <span class="current">Features</span>
-      </nav>
+      <PageBreadcrumb
+:items="[
+        { label: 'Home', to: '/' },
+        { label: 'Features' },
+      ]" />
       <h1 class="page-title">Feature Flags</h1>
     </header>
 
@@ -41,32 +41,6 @@ const { isEnabled, toggle } = useFeatureFlags();
   max-width: 600px;
   margin: 0 auto 2rem;
   padding-top: 1rem;
-}
-
-.breadcrumb {
-  font-family: "Georgia", serif;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.nav-link {
-  color: var(--ui-color-primary-700);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--ui-color-primary-500);
-}
-
-.separator {
-  color: #999;
-}
-
-.current {
-  color: #666;
 }
 
 .page-title {
