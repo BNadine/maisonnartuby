@@ -51,7 +51,8 @@ onUnmounted(() => window.removeEventListener("keydown", onKeydown));
 <template>
   <div v-if="room" class="room-page">
     <header class="page-header">
-      <PageBreadcrumb :items="[
+      <PageBreadcrumb
+:items="[
         { label: t('rooms.backToHome'), to: '/' },
         { label: t('rooms.title'), to: '/rooms' },
         { label: t(room.nameKey) },

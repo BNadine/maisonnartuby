@@ -5,7 +5,8 @@ const { isEnabled, toggle } = useFeatureFlags();
 <template>
   <div class="features-page">
     <header class="page-header">
-      <PageBreadcrumb :items="[
+      <PageBreadcrumb
+:items="[
         { label: 'Home', to: '/' },
         { label: 'Features' },
       ]" />

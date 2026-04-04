@@ -5,7 +5,8 @@ const { t } = useI18n();
 <template>
   <div class="impressum-page">
     <header class="page-header">
-      <PageBreadcrumb :items="[
+      <PageBreadcrumb
+:items="[
         { label: t('rooms.backToHome'), to: '/' },
         { label: t('footer.impressum') },
       ]" />

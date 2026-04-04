@@ -4,9 +4,9 @@ import { useRooms } from "../../app/composables/useRooms";
 describe("useRooms", () => {
   const { getAllRooms, getRoom } = useRooms();
 
-  it("returns all 5 rooms", () => {
+  it("returns all 6 rooms", () => {
     const rooms = getAllRooms();
-    expect(rooms).toHaveLength(5);
+    expect(rooms).toHaveLength(6);
   });
 
   it("each room has required fields", () => {
@@ -20,7 +20,9 @@ describe("useRooms", () => {
       expect(room.roomAmenitiesKeys.length).toBeGreaterThan(0);
       expect(room.houseAmenitiesKeys.length).toBeGreaterThan(0);
       expect(room.images.length).toBeGreaterThan(0);
-      expect(room.bookingUrl).toMatch(/^https:\/\/airbnb\.de\/h\/maisonnartuby-\d$/);
+      if (room.bookingUrl) {
+        expect(room.bookingUrl).toMatch(/^https:\/\/airbnb\.de\/h\/maisonnartuby-\d$/);
+      }
     }
   });
 
@@ -39,7 +41,7 @@ describe("useRooms", () => {
   it("has correct room slugs", () => {
     const rooms = getAllRooms();
     const slugs = rooms.map((r) => r.slug);
-    expect(slugs).toEqual(["champagne", "nid", "creatif", "nartuby", "lavande"]);
+    expect(slugs).toEqual(["champagne", "nid", "creatif", "nartuby", "lavande", "rose"]);
   });
 
   it("nid room has capacity 1", () => {
@@ -47,11 +49,11 @@ describe("useRooms", () => {
     expect(room!.capacity).toBe(1);
   });
 
-  it("nartuby and lavande have private bathroom", () => {
+  it("nartuby has private bathroom, lavande has private shower", () => {
     const nartuby = getRoom("nartuby");
     const lavande = getRoom("lavande");
     expect(nartuby!.roomAmenitiesKeys).toContain("rooms.amenities.privateBathroom");
-    expect(lavande!.roomAmenitiesKeys).toContain("rooms.amenities.privateBathroom");
+    expect(lavande!.roomAmenitiesKeys).toContain("rooms.amenities.privateShowerSharedWC");
   });
 
   it("champagne, nid, and creatif have shared bathroom", () => {

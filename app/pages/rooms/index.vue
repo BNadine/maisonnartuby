@@ -8,7 +8,8 @@ const rooms = getAllRooms();
 <template>
   <div class="rooms-page">
     <header class="page-header">
-      <PageBreadcrumb :items="[
+      <PageBreadcrumb
+:items="[
         { label: t('rooms.backToHome'), to: '/' },
         { label: t('rooms.title') },
       ]" />
